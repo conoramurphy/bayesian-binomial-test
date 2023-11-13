@@ -308,3 +308,27 @@ pub fn compute(
     }
     Ok((b_win as f64) / n_samples as f64)
 }
+
+/*
+Step 1: Cut out the calcualtions and the histogram into seperate fuctions and display the calulcations
+Step 2: Dump the historgram
+Step 3: Do a first pass without posterios for the below
+Step 4: Add the posteriors
+Step 5: Display them nicely
+
+let dist_a = Beta::new(prior_pos + a_pos, prior_neg + a_tot - a_pos).unwrap();
+let dist_b = Beta::new(prior_pos + b_pos, prior_neg + b_tot - b_pos).unwrap();
+
+let a_sample = dist_a.sample(&mut rng);
+let b_sample = dist_b.sample(&mut rng);
+
+let diff = b_sample - a_sample;
+
+Something like WITH NO DIFF POSTERIOR
+
+FOR (n in X) volume calculate distributions and sample for uplifts
+
+Something like WITH NO DIFF POSTERIOR
+
+
+*/
